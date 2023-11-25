@@ -19,5 +19,21 @@ public class Application {
         Thread thread3 = new Thread(()->{
             System.out.println("Thread 3");
         }, "Thread 3");
+
+
+//        if we want to run thread 3 to stop running parallely and work synchronously
+
+        try {
+            thread3.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        // thread has priority from 1 to 10 and it is just an advisory method
+
+        thread3.getPriority();
+        thread3.setPriority(6);
+
+
     }
 }
