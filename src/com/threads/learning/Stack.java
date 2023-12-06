@@ -17,17 +17,17 @@ public class Stack {
 //    Any object can be considered a lock
 
 
-//    both push and pop has same lock, now if two threads or same thread want to push and pop at the same time
+//    both push and pop has different lock, now if two threads or same thread want to push and pop at the same time
 //    then it would not happen as other threads will not have access to same lock
 //    public boolean push(int elem) {
-//        synchronized (lock) {
+//        synchronized (lock1) {
 //            this.array[0] = elem;
 //        }
 //        return false;
 //    }
 //
 //    public int pop() {
-//        synchronized (lock) {
+//        synchronized (lock2) {
 //            return 0;
 //        }
 //    }
